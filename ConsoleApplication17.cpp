@@ -18,11 +18,14 @@ int main()
 
 	node1->next1->value = 2;
 	node1->next1->next1 = new Node();
+	
 	node1->next1->next2 = node1->next2;
 	node1->next1->next1->value = 3;
+	
 	node1->next1->next1->next1 = node1->next1;
 	node1->next1->next1->next2 = node1->next2;
 	node1->next1->next1->next2 = node1;
+	
 	node1->next2->value = 4;
 	node1->next2->next1 = node1->next1;
 	node1->next2->next2 = node1->next1->next1;
@@ -35,10 +38,14 @@ int main()
 
 	node1->next2->value = 2;
 	node1->next2->next1 = new Node();
+	
 	node1->next2->next2 = nullptr;
+	
 	node1->next2->next1->value = 3;
 	node1->next2->next1->next1 = node1->next2;
+	
 	node1->next2->next1->next2 = nullptr;
+	
 	node1->next1->value = 4;
 	node1->next1->next1 = node1->next2;
 	node1->next1->next2 = node1->next2->next1;
